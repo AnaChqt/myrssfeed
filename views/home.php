@@ -37,48 +37,48 @@
                     <div class="carousel-item active ">
                         <div class="blockSlide">
                             <div class="cardArticle">
-                                <img src="/public/assets/img/UserWhite.png" class="pictureCardArticle" alt="...">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
-                                    optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
-                                    consectetur reiciendis ipsa. Saepe.</p>
+                                <img src=" " class="pictureCardArticle" alt="...">
+                                <p class="descriptionCardArticle">
+
+                                </p>
                             </div>
                             <div class="cardArticle">
-                                <img src="/public/assets/img/UserWhite.png" class="pictureCardArticle" alt="...">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
-                                    optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
-                                    consectetur reiciendis ipsa. Saepe.</p>
+                                <img src=" " class="pictureCardArticle" alt="...">
+                                <p class="descriptionCardArticle">
+
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item ">
                         <div class="blockSlide">
                                 <div class="cardArticle">
-                                    <img src="/public/assets/img/UserDark.png" class="pictureCardArticle" alt="...">
-                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
-                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
-                                        consectetur reiciendis ipsa. Saepe.</p>
+                                    <img src=" " class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">
+
+                                    </p>
                                 </div>
                                 <div class="cardArticle">
-                                    <img src="/public/assets/img/UserDark.png" class="pictureCardArticle" alt="...">
-                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
-                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
-                                        consectetur reiciendis ipsa. Saepe.</p>
+                                    <img src=" " class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">
+
+                                    </p>
                                 </div>
                             </div>
                     </div>
                     <div class="carousel-item ">
                         <div class="blockSlide">
                                 <div class="cardArticle">
-                                    <img src="/public/assets/img/Logo.png" class="pictureCardArticle" alt="...">
-                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
-                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
-                                        consectetur reiciendis ipsa. Saepe.</p>
+                                    <img src=" " class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">
+
+                                    </p>
                                 </div>
                                 <div class="cardArticle">
-                                    <img src="/public/assets/img/Logo.png" class="pictureCardArticle" alt="...">
-                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
-                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
-                                        consectetur reiciendis ipsa. Saepe.</p>
+                                    <img src=" " class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">
+
+                                    </p>
                                 </div>
                             </div>
                     </div>
