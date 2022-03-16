@@ -23,6 +23,12 @@
             <h2 id="titleCategory">
 
             </h2>
+            <div class="lastArticle">
+                <img src="" alt="" class="pictureLastArticle">
+                <h3 class="titleLastArticle">
+                    
+                </h3>
+            </div>
             <div class="articlePreview">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
