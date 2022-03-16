@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.titleTopPage{
+    font-family: 'Anton';
+    color: #6C30FF;
+    text-shadow: 1px 1px 1px #333;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
