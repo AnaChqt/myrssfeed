@@ -26,34 +26,79 @@
             <div class="lastArticle">
                 <img src="" alt="" class="pictureLastArticle">
                 <h3 class="titleLastArticle">
-                    
+
                 </h3>
             </div>
-            <div class="articlePreview">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active wrapper">
-                            <img class="d-block w-100" src="..." alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Third slide">
+        
+        <div class="previewsArticle">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+                data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <div class="blockSlide">
+                            <div class="cardArticle">
+                                <img src="/public/assets/img/UserWhite.png" class="pictureCardArticle" alt="...">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
+                                    optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
+                                    consectetur reiciendis ipsa. Saepe.</p>
+                            </div>
+                            <div class="cardArticle">
+                                <img src="/public/assets/img/UserWhite.png" class="pictureCardArticle" alt="...">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
+                                    optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
+                                    consectetur reiciendis ipsa. Saepe.</p>
+                            </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="carousel-item ">
+                        <div class="blockSlide">
+                                <div class="cardArticle">
+                                    <img src="/public/assets/img/UserDark.png" class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
+                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
+                                        consectetur reiciendis ipsa. Saepe.</p>
+                                </div>
+                                <div class="cardArticle">
+                                    <img src="/public/assets/img/UserDark.png" class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
+                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
+                                        consectetur reiciendis ipsa. Saepe.</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="blockSlide">
+                                <div class="cardArticle">
+                                    <img src="/public/assets/img/Logo.png" class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
+                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
+                                        consectetur reiciendis ipsa. Saepe.</p>
+                                </div>
+                                <div class="cardArticle">
+                                    <img src="/public/assets/img/Logo.png" class="pictureCardArticle" alt="...">
+                                    <p class="descriptionCardArticle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur vero quam
+                                        optio, dolorem alias, quas numquam beatae harum earum voluptates quia, non aliquid laborum
+                                        consectetur reiciendis ipsa. Saepe.</p>
+                                </div>
+                            </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
+
+        </div>
     </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>

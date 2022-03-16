@@ -6,8 +6,12 @@
     padding: 0;
 }
 
+body{
+    background-color: #333;
+}
 
-.titleTopPage{
+
+.titleTopPage {
     font-family: 'Anton';
     color: #6C30FF;
     text-shadow: 1px 1px 1px #333;
@@ -15,6 +19,37 @@
     margin-left: 1rem;
 }
 
-.lastArticle{
+.lastArticle {
     position: relative;
 }
+
+.titleLastArticle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pictureLastArticle {
+    width: 100%;
+    object-position: center;
+}
+
+.blockSlide{
+    display: flex;
+}
+
+.cardArticle{
+    border: 1px solid white;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    
+}
+
+.pictureCardArticle{
+    height: 30%;
+}
+
