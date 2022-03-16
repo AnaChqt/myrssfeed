@@ -1,3 +1,17 @@
+<?php
+// tableau des erreurs
+$error = [];
+
+define('CATEGORIES',['cat1', 'cat2', 'cat3', 'cat4', 'cat5']);
+$selected
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -28,7 +42,7 @@
                     </li>
 
                     <li class="nav-item d-lg-none navMobile">
-                        <a class="icon" data-bs-toggle="modal" data-bs-target="#openModalMV"><img src="/public/assets/img/UserWhite.png" alt=""></a>
+                        <a class="icon" data-bs-toggle="modal" data-bs-target="#openModalDV"><img src="/public/assets/img/UserWhite.png" alt=""></a>
                     </li>
                 </ul>
                 <div class="collapse navbar-collapse justify-content-between w-50 navVersion" id="navbarNav">
@@ -58,9 +72,9 @@
 
 
 
-    <!-- START MODAL -->
-    <!-- Start Search Modal Desktop Version -->
-    <!-- <div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- START MODAL -->
+<!-- Start Search Modal Desktop Version -->
+<div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -68,35 +82,50 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="GET" id="formUser" enctype="multipart/form-data" novalidate>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                <div class="mb-3">
+                                    <label for="catégories">Choix des catégories</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat1" value="1">
+                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat2" value="2">
+                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat3" value="3">
+                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat3" value="4">
+                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat4" value="5">
+                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 5</label>
+                                </div>
+                                <!-- <p class="error"></p> -->
 
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
 
+                <div class="modal-footer">
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- End Search Modal Desktop Version -->
+    </div>
+<!-- End Search Modal Desktop Version -->
 
-    <!-- Start Search Modal Mobile Version -->
-    <!-- <div class="modal fade" id="openModalMV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">titre</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
 
-                </div>
-                <div class="modal-footer">
-
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Search Modal Mobile Version -->
-<!-- END MODAL -->
 
 <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
