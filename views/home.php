@@ -9,14 +9,16 @@
         <div class="category">
             
                 <?php
-                    for ($i=0; $i <$articlesNumber ; $i++) {
-                    $title= $item[$i]->title; ?>
-                    <h2 id="titleCategory"> 
-                        <?=$title?>
+                    //for ($i=0; $i <$articlesNumber ; $i++) {
+                    //$title= $item[$i]->title; ?>
+                    <!-- <h2 id="titleCategory">  -->
+                        <?=//$title?>
                     </h2>
                 <?php 
                     }
                 ?>
+
+
 
             <div class="lastArticle">
                 <img src="" alt="" class="pictureLastArticle">
