@@ -6,9 +6,17 @@
             </h1>
         </div>
         <div class="category">
-            <h2 id="titleCategory">
+            
+                <?php
+                    for ($i=0; $i <$articlesNumber ; $i++) {
+                    $title= $item[$i]->title; ?>
+                    <h2 id="titleCategory"> 
+                        <?=$title?>
+                    </h2>
+                <?php 
+                    }
+                ?>
 
-            </h2>
             <div class="lastArticle">
                 <img src="" alt="" class="pictureLastArticle">
                 <h3 class="titleLastArticle">
@@ -83,4 +91,4 @@
         </div>
 
         </div>
-    </section>l
+    </section>
