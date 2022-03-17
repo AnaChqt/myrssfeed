@@ -9,8 +9,10 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <!-- CSS -->
     <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/homePage.css">
+    <link rel="shortcut icon" href="/public/assets/img/Logo.png" type="image/x-icon">
 
-    <title>Document</title>
+    <title>ManuGameWorld</title>
 
 </head>
 <body>

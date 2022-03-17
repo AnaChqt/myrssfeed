@@ -1,10 +1,38 @@
 <?php
-// tableau des erreurs
+// Tableau 
 $error = [];
 
-define('CATEGORIES',['cat1', 'cat2', 'cat3', 'cat4', 'cat5']);
-$selected
 
+
+if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages d'erreurs avant d'envoyer le formulaitre
+
+    // Nettoyage et validation : checkboxes
+    define('CATEGORIES',['Actualités', 'Test', 'PS5', 'XBOX X', 'SWITCH']);
+    $selectedCategories = filter_input(INPUT_GET, 'categories', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY) ?? [];
+
+    if (count(array_intersect((CATEGORIES), $selectedCategories)) != count($selectedCategories)){
+        $error['categories'] = 'erreur';
+
+    } else {
+        if (count($selectedCategories) != 3) {
+            $error['categories'] = '3 choix';
+        } else {
+            setcookie('categories', json_encode($selectedCategories), time() + 60*60*24*3); // pour 3 jours
+            $test = 'coucou';
+        }
+    }
+
+    // Nettoyage et validation : radio
+    define('FORMAT',['6', '9', '12']);
+    $selectedFormat = filter_input(INPUT_GET, 'format', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY) ?? [];
+
+    if (count(array_intersect((FORMAT), $selectedFormat)) != count($selectedFormat)){
+        $error['format'] = 'cochez une case';
+    } else {
+        setcookie('format', json_encode($selectedFormat), time() + 60*60*24*3); // pour 3 jours
+    }
+
+}
 ?>
 
 
@@ -29,7 +57,7 @@ $selected
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg justify-content-center fixed-top">
+        <nav class="navbar navbar-expand-lg justify-content-center fixed-top">
             <div class="container-fluid navbarMobile">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,64 +102,91 @@ $selected
 
 <!-- START MODAL -->
 <!-- Start Search Modal Desktop Version -->
-<div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">titre</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="GET" id="formUser" enctype="multipart/form-data" novalidate>
+            <div class="modal-content"> -->
+                <div class="exem" ></div>
+                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="GET" id="formUser" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">titre</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
                         <div class="container">
                             <div class="row">
                                 <div class="col">
                                 <div class="mb-3">
-                                    <label for="catégories">Choix des catégories</label>
+                                    <label for="categories">Choisissez 3 catégories :</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat1" value="1">
-                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 1</label>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="Actualités" value="Actualités">
+                                    <label class="checkbox" for="inlineCheckbox">Actualités</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat2" value="2">
-                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 2</label>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="Test" value="Test">
+                                    <label class="checkbox" for="inlineCheckbox">Test</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat3" value="3">
-                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 3</label>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="PS5" value="PS5">
+                                    <label class="checkbox" for="inlineCheckbox">PS5</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat3" value="4">
-                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 4</label>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="XBOX X" value="XBOX X">
+                                    <label class="checkbox" for="inlineCheckbox">XBOX X</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="catégories" class="form-check-input" type="checkbox" id="cat4" value="5">
-                                    <label class="form-check-label-check" for="inlineCheckbox">Catégorie 5</label>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="SWITCH" value="SWITCH">
+                                    <label class="checkbox" for="inlineCheckbox">SWITCH</label>
                                 </div>
-                                <!-- <p class="error"></p> -->
-
-
+                                    <p class="error"><?= $error['categories'] ?? '' ?></p>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
 
-                <div class="modal-footer">
-                </div>
-            </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                <div class="mb-3">
+                                    <label for="format">Choisissez 3 catégories :</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="format[]" class="form-check-input format" type="radio"  required id="6" value="6">
+                                    <label class="radio" for="inlineradio">6</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="format[]" class="form-check-input format" type="radio"  required id="9" value="9">
+                                    <label class="radio" for="inlineradio">9</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="format[]" class="form-check-input format" type="radio"  required id="12" value="12">
+                                    <label class="radio" for="inlineRadio">12</label>
+                                </div>
+                                
+                                    <p class="error"><?= $error['format'] ?? '' ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button class="btn btn-lg" type="submit">Submit </button>                
+                    </div>
+                </form>
+            <!-- </div>
         </div>
-    </div>
+    </div> -->
 <!-- End Search Modal Desktop Version -->
 
 
 
 <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- JS -->
-    <script src=""></script>
+    <script src="/public/assets/js/script.js"></script>
 
 </body>
 </html>
