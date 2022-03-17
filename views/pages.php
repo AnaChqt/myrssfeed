@@ -1,7 +1,4 @@
-
-    
-<?php
-
+    <?php
 
     for ($i=0; $i <$articlesNumber ; $i++) { ?>
         <!-- $title= $item[$i]->title;
@@ -28,7 +25,7 @@
     <?php
     }
     
-?> 
+    ?> 
     
 
 
