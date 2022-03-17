@@ -1,14 +1,12 @@
 <?php
-// Tableau 
+// Tableau des erreurs
 $error = [];
 
-
-
-if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages d'erreurs avant d'envoyer le formulaitre
+if($_SERVER['REQUEST_METHOD']== 'POST'){ //permet de ne pas afficher les messages d'erreurs avant d'envoyer le formulaitre
 
     // Nettoyage et validation : checkboxes
     define('CATEGORIES',['Actualités', 'Test', 'PS5', 'XBOX X', 'SWITCH']);
-    $selectedCategories = filter_input(INPUT_GET, 'categories', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY) ?? [];
+    $selectedCategories = filter_input(INPUT_POST, 'categories', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY) ?? [];
 
     if (count(array_intersect((CATEGORIES), $selectedCategories)) != count($selectedCategories)){
         $error['categories'] = 'erreur';
@@ -24,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages
 
     // Nettoyage et validation : radio
     define('FORMAT',['6', '9', '12']);
-    $selectedFormat = filter_input(INPUT_GET, 'format', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY) ?? [];
+    $selectedFormat = filter_input(INPUT_POST, 'format', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY) ?? [];
 
     if (count(array_intersect((FORMAT), $selectedFormat)) != count($selectedFormat)){
         $error['format'] = 'cochez une case';
@@ -32,13 +30,16 @@ if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages
         setcookie('format', json_encode($selectedFormat), time() + 60*60*24*3); // pour 3 jours
     }
 
+    // cookie : mode dark
+    if ($_POST['mod'] == 1) {
+        $theme = 'dark mod';
+    } else {
+        $theme = 'light mod';
+    }
+    setcookie('mod', $theme, time() + 60*60*24*3); // pour 3 jours
+
 }
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -51,8 +52,9 @@ if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <!-- CSS -->
     <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="shortcut icon" href="/public/assets/img/Logo.png" type="image/x-icon">
 
-    <title>Document</title>
+    <title>ManuGamesWorld</title>
 
 </head>
 <body>
@@ -98,15 +100,12 @@ if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages
         </nav>
     </header>
 
-
-
 <!-- START MODAL -->
 <!-- Start Search Modal Desktop Version -->
-    <!-- <div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content"> -->
-                <div class="exem" ></div>
-                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="GET" id="formUser" enctype="multipart/form-data">
+            <div class="modal-content">
+                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" id="formUser" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">titre</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -149,7 +148,7 @@ if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages
                             <div class="row">
                                 <div class="col">
                                 <div class="mb-3">
-                                    <label for="format">Choisissez 3 catégories :</label>
+                                    <label for="format">Choisissez un format :</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input name="format[]" class="form-check-input format" type="radio"  required id="6" value="6">
@@ -170,17 +169,29 @@ if($_SERVER['REQUEST_METHOD']== 'GET'){ //permet de ne pas afficher les messages
                         </div>
                     </div>
 
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                <div class="mb-3">
+                                    <label for="mod">Choisissez votre mode :</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input name="mod"class="form-check-input" type="checkbox" role="switch" id="mod" value="1">
+                                    <label class="switch" for="flexSwitchCheckDefault">&#x263D;</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="modal-footer">
                         <button class="btn btn-lg" type="submit">Submit </button>                
                     </div>
                 </form>
-            <!-- </div>
+            </div>
         </div>
-    </div> -->
+    </div>
 <!-- End Search Modal Desktop Version -->
-
-
 
 <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
