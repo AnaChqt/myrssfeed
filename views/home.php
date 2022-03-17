@@ -1,4 +1,20 @@
-
+<?php
+    foreach ($arrayXML as $key => $value) { ?>
+        <h2 id="titleCategory"><?=$value->nameCategory?></h2>
+        <div class="lastArticle">
+            <?php
+                for ($i;$i<=$articlesNumber; $i++) { ?>
+                <img src="<?=$value->flux->channel->item[$i]->enclosure['url']?>" alt="" class="">
+                <h3 class="">
+                <?=$value->flux->channel->item[$i]->title?>
+                </h3>
+                <?php
+                }
+                ?>
+        </div>
+    <?php 
+    }
+    ?>
     <section class="homePage">
         <div class="topPage">
             <h1 class="titleTopPage">
@@ -6,16 +22,7 @@
             </h1>
         </div>
         <div class="category">
-            
-                <?php
-                    for ($i=0; $i <$articlesNumber ; $i++) {
-                    $title= $item[$i]->title; ?>
-                    <h2 id="titleCategory"> 
-                        <?=$title?>
-                    </h2>
-                <?php 
-                    }
-                ?>
+        <h2 id="titleCategory"> </h2>
 
             <div class="lastArticle">
                 <img src="" alt="" class="pictureLastArticle">
@@ -92,3 +99,4 @@
 
         </div>
     </section>
+<?php

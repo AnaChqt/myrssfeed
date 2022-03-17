@@ -1,20 +1,63 @@
 <?php
 
-    $actusAll = simplexml_load_file('https://www.jeuxactu.com/rss/ja.rss');
-    $testsAll = simplexml_load_file('https://www.jeuxactu.com/rss/tests.rss');
-    $ps5All = simplexml_load_file('https://www.jeuxactu.com/rss/ps5.rss');
-    $xBoxSeriesXAll = simplexml_load_file('https://www.jeuxactu.com/rss/xbox-series-x.rss');
-    $switchAll = simplexml_load_file('https://www.jeuxactu.com/rss/switch.rss');
 
-    $item = $actusAll->channel->item;
-    // echo $actusTable[1]->title;
-    $articlesNumber = 9;
+
+
+
+
+    
+$articlesNumber = 9;
 
     // for ($i=0; $i <$articlesNumber ; $i++) {
     //     $title= $actusTable[$i]->title;
     //     $img= $actusTable[$i]->enclosure['url'];
     //     $description= $actusTable[$i]->description;
     // }
+
+        $categories = [
+            'cat1','cat2','cat3'];
+        
+        $arrayXML = [];
+        
+        foreach ($categories as $value) {
+            switch ($value) {
+                case 'cat1':
+                    $actus = (object) [
+                        'flux' => simplexml_load_file('https://www.jeuxactu.com/rss/ja.rss'),
+                        'nameCategory' => 'Actus'
+                    ];
+                    array_push($arrayXML,$actus);
+                    break;
+                case 'cat2':
+                    array_push($arrayXML, (object) [
+                        'flux' => simplexml_load_file('https://www.jeuxactu.com/rss/tests.rss'),
+                        'nameCategory' => 'Tests'
+                    ]);
+                    break;
+                case 'cat3':
+                    array_push($arrayXML, (object) [
+                        'flux' => simplexml_load_file('https://www.jeuxactu.com/rss/ps5.rss'),
+                        'nameCategory' => 'PS5'
+                    ]);
+                    break;
+                case 'cat4':
+                    array_push($arrayXML, $xbox = [
+                        'flux' => simplexml_load_file('https://www.jeuxactu.com/rss/xbox-series-x.rss'),
+                        'nameCategory' => 'Xbox'
+                    ]);
+                    break;
+                case 'cat5':
+                    array_push($arrayXML, $switch = [
+                        'flux' => simplexml_load_file('https://www.jeuxactu.com/rss/switch.rss'),
+                        'nameCategory' => 'Switch'
+                    ]);
+                    break;
+            }
+        };
+        //var_dump($arrayXML[0]->flux->channel->image->link);
+        // var_dump($arrayXML);
+        // die;
+
 
 
     include(dirname(__FILE__) . '/../views/templates/header.php');
