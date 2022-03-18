@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse justify-content-between w-50 navVersion" id="navbarNav">
                     <div class="logo">
                         <!--logo-->
-                        <a href="#" class="logo"><img src="/public/assets/img/logo.png" alt=""></a>
+                        <a href="http://myrssfeed.localhost/controllers/home-controller.php" class="logo"><img src="/public/assets/img/logo.png" alt=""></a>
                     </div>
                     <ul class="navbar-nav mb-2 mb-lg-0 topBotomBordersOut ml-auto text-center fw-bold">
                         <li class="nav-item">
