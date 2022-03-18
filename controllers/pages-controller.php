@@ -1,34 +1,15 @@
 <?php
 
-    $categories = $_COOKIE['categories'];
-    
-    $actusAll = simplexml_load_file('https://www.jeuxactu.com/rss/ja.rss');
-    $testsAll = simplexml_load_file('https://www.jeuxactu.com/rss/tests.rss');
-    $ps5All = simplexml_load_file('https://www.jeuxactu.com/rss/ps5.rss');
-    $xBoxSeriesXAll = simplexml_load_file('https://www.jeuxactu.com/rss/xbox-series-x.rss');
-    $switchAll = simplexml_load_file('https://www.jeuxactu.com/rss/switch.rss');
+$category = $_GET['category'];  
+// if (empty($category)) {
+//     header('location: /404.php');
+//     die;
+// }
 
-        switch ($categories) {
-            case '0':
-                $path = $actusAll;
-            break;
-            case '1':
-                $path = $testsAll;
-            break;
-            case '2':
-                $path = $ps5All;
-            break;
-            case '3':
-                $path = $xBoxSeriesXAll;
-            break;
-            case '4':
-                $path = $switchAll;
-            break;
-        }
+require(dirname(__FILE__) . '/../config/init.php');
 
+    // $items = arrayXML[$category]->flux->channel->item;
     
-    $item = $path->channel->item;
-    $articlesNumber = 9;
 
     include(dirname(__FILE__) . '/../views/templates/header.php');
     include(dirname(__FILE__) . '/../views/pages.php');
