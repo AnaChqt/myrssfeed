@@ -9,31 +9,31 @@
     margin-bottom: 5em;
 } */
 
-.titleContent{
+.card .titleContent{
     margin: 1em;
     text-align: center;
 }
 
-img{
+.card img{
     height: 20em;  
     object-fit: contain;
     /* margin-right: 5em; */
     /* border: 0.5rem solid #6C30FF; */
 }
 
-.cardsContent{
+.card .cardsContent{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.paragContent{
+.card .paragContent{
     width: 50%;
     text-align: center;
     font-size: large;
 }
 
-.discover{
+.card .discover{
     text-align: center;
     text-decoration: none;
     color: #6C30FF;

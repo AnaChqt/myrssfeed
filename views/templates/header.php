@@ -42,13 +42,13 @@
                     </div>
                     <ul class="navbar-nav mb-2 mb-lg-0 topBotomBordersOut ml-auto text-center fw-bold">
                         <li class="nav-item">
-                            <a class="nav-link " href="http://myrssfeed.localhost/controllers/pages-controller.php?category=1">Catégorie 1</a>
+                            <a class="nav-link " href="http://myrssfeed.localhost/controllers/pages-controller.php?category=0">Catégorie 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=2">Catégorie 2</a>
+                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=1">Catégorie 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=3">Catégorie 3</a>
+                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=2">Catégorie 3</a>
                         </li>
 
                         <li class="nav-item d-none d-lg-block">
