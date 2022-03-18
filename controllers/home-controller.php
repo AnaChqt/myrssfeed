@@ -1,19 +1,5 @@
 <?php
 
-
-
-
-
-
-    
-$articlesNumber = 9;
-
-    // for ($i=0; $i <$articlesNumber ; $i++) {
-    //     $title= $actusTable[$i]->title;
-    //     $img= $actusTable[$i]->enclosure['url'];
-    //     $description= $actusTable[$i]->description;
-    // }
-
         $categories = [
             'cat1','cat2','cat3'];
         
@@ -54,10 +40,6 @@ $articlesNumber = 9;
                     break;
             }
         };
-        //var_dump($arrayXML[0]->flux->channel->image->link);
-        // var_dump($arrayXML);
-        // die;
-
 
         include(dirname(__FILE__) . '/../views/templates/header.php');
         include(dirname(__FILE__) . '/../views/home.php');

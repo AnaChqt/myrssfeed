@@ -5,10 +5,13 @@
     min-height: 20vh;
     position: sticky;
     top: 0;
+    transition: all 0.3 ease-out;
+    z-index: 10;
     background: rgba(51, 51, 51);
     box-shadow: 0 0.5rem 2rem 0 rgba(54, 56, 82, 0.369);
     border: transparent;
 }
+
 
 .navbar-toggler:focus {
     box-shadow: none;
