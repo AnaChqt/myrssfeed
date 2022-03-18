@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +16,9 @@
 
     <title>ManuGameWorld</title>
 </head>
+
+
+
 
 <body>
     <header>
@@ -42,13 +45,13 @@
                     </div>
                     <ul class="navbar-nav mb-2 mb-lg-0 topBotomBordersOut ml-auto text-center fw-bold">
                         <li class="nav-item">
-                            <a class="nav-link " href="http://myrssfeed.localhost/controllers/pages-controller.php?category=0">Catégorie 1</a>
+                            <a class="nav-link " href="#">Catégorie 1</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=1">Catégorie 2</a>
+                            <a class="nav-link" href="#">Catégorie 2</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=2">Catégorie 3</a>
+                            <a class="nav-link" href="#">Catégorie 3</a>
                         </li>
 
                         <li class="nav-item d-none d-lg-block">
@@ -58,13 +61,17 @@
                 </div>
             </div>
         </nav>
+
+
     </header>
 
+
+<!-- START MODAL -->
+<!-- Start Search Modal Desktop Version -->
     <div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="exem" ></div>
-                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="GET" id="formUser" enctype="multipart/form-data">
+                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" id="formUser" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">titre</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -101,6 +108,48 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                <div class="mb-3">
+                                    <label for="format">Choisissez un format :</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="format[]" class="form-check-input format" type="radio"  required id="6" value="6">
+                                    <label class="radio" for="inlineradio">6</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="format[]" class="form-check-input format" type="radio"  required id="9" value="9">
+                                    <label class="radio" for="inlineradio">9</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="format[]" class="form-check-input format" type="radio"  required id="12" value="12">
+                                    <label class="radio" for="inlineRadio">12</label>
+                                </div>
+                                
+                                    <p class="error"><?= $error['format'] ?? '' ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                <div class="mb-3">
+                                    <label for="mod">Choisissez votre mode :</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input name="mod"class="form-check-input" type="checkbox" id="mod" value="1">
+                                    <label class="switch" for="flexSwitchCheckDefault">&#x263D;</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="modal-footer">
                         <button class="btn btn-lg" type="submit">Submit </button>                
                     </div>
@@ -108,3 +157,4 @@
             </div>
         </div>
     </div>
+<!-- End Search Modal Desktop Version -->
