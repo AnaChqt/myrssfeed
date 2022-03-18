@@ -11,7 +11,6 @@ for (; i<l; i++)
 	}, false);
 
 // pour le thème dark
-
 let toggle_btn = document.getElementById('mod');
 let body = document.getElementsByTagName('body')[0];
 
