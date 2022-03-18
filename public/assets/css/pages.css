@@ -1,8 +1,7 @@
-.card{
-    margin: 2em;
-    border: 4mm ridge rgba(211, 220, 50, .6);
-    padding-left: 10em;
-    padding-right: 10em;
+.cardPage {
+    display: flex;
+    margin: 1rem;
+    box-shadow: 7px 5px 3px -4px rgba(0,0,0,0.50);
 }
 
 /* .cardsContent{
@@ -12,31 +11,29 @@
 .titleContent{
     margin: 1em;
     text-align: center;
+    font-family: 'Anton';
+}
+
+.paragContent{
+    font-family: 'Oswald';
+    font-weight: 900;
+    margin: 1rem;
 }
 
 img{
-    height: 20em;  
-    object-fit: contain;
+    width: 100%;
     /* margin-right: 5em; */
     /* border: 0.5rem solid #6C30FF; */
 }
 
-.cardsContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.paragContent{
+.cardLeft {
     width: 50%;
-    text-align: center;
-    font-size: large;
 }
 
-.discover{
-    text-align: center;
-    text-decoration: none;
-    color: #6C30FF;
-    margin-bottom: 1em;
-    font-size: larger;
+.cardsContent{
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
 }
+

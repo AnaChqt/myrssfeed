@@ -11,24 +11,20 @@
         $description= $item[$i]->description;
         echo $description.'<br><br><br>'; -->
     
-        <div class="card">
-            <h3 class="titleContent"><?=$item[$i]->title?> </h3>
-            <div class="cardsContent">
-                <article>
-                <p class="paragContent"><?=$item[$i]->description?></p>
-                </article>
-                <aside>
-                <img src="<?=$item[$i]->enclosure['url']?>" alt="image de l'article">
-                </aside>
+        <div class="cardPage">
+            <div class="cardLeft">
+                <a class="discover" href="<?=$item[$i]->link?>">
+                    <img src="<?=$item[$i]->enclosure['url']?>" alt="image de l'article">
+                </a>
             </div>
-            <a class="discover" href="<?=$item[$i]->link?>">En savoir plus</a>
+            <div class="cardsContent">
+                <p class="paragContent"><?=$item[$i]->description?></p>
+                <h3 class="titleContent"><?=$item[$i]->title?> </h3>
+            </div>
         </div>
-
-
     <?php
-    }
-    
-?> 
+    }    
+    ?> 
     
 
 
