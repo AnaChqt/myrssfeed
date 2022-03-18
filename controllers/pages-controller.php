@@ -1,6 +1,6 @@
 <?php
 
-    $category = $_GET['category'];
+    $categories = $_COOKIE['categories'];
     
     $actusAll = simplexml_load_file('https://www.jeuxactu.com/rss/ja.rss');
     $testsAll = simplexml_load_file('https://www.jeuxactu.com/rss/tests.rss');
@@ -8,20 +8,20 @@
     $xBoxSeriesXAll = simplexml_load_file('https://www.jeuxactu.com/rss/xbox-series-x.rss');
     $switchAll = simplexml_load_file('https://www.jeuxactu.com/rss/switch.rss');
 
-        switch ($category) {
-            case '1':
+        switch ($categories) {
+            case '0':
                 $path = $actusAll;
             break;
-            case '2':
+            case '1':
                 $path = $testsAll;
             break;
-            case '3':
+            case '2':
                 $path = $ps5All;
             break;
-            case '4':
+            case '3':
                 $path = $xBoxSeriesXAll;
             break;
-            case '5':
+            case '4':
                 $path = $switchAll;
             break;
         }
