@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){ //permet de ne pas afficher les message
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){ //permet de ne pas afficher les message
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <!-- CSS -->
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/style.css" !important>
     <link rel="shortcut icon" href="/public/assets/img/Logo.png" type="image/x-icon">
 
     <title>ManuGamesWorld</title>
@@ -98,7 +98,10 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){ //permet de ne pas afficher les message
                 </div>
             </div>
         </nav>
+        <div class="test"><p>Ceci est un test</p></div>
+
     </header>
+
 
 <!-- START MODAL -->
 <!-- Start Search Modal Desktop Version -->
@@ -177,7 +180,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){ //permet de ne pas afficher les message
                                     <label for="mod">Choisissez votre mode :</label>
                                 </div>
                                 <div class="form-check form-switch">
-                                    <input name="mod"class="form-check-input" type="checkbox" role="switch" id="mod" value="1">
+                                    <input name="mod"class="form-check-input" type="checkbox" id="mod" value="1">
                                     <label class="switch" for="flexSwitchCheckDefault">&#x263D;</label>
                                 </div>
                             </div>
