@@ -28,7 +28,7 @@
                 </button>
                 <ul class="navbar-nav mb-2 mb-lg-0 ml-auto fw-bold navbarMobile2">
                     <li class="nav-item d-lg-none navMobile">
-                        <a href="#" class="icon"><img id="" src="/public/assets/img/logo.png" alt=""></a>
+                        <a href="http://myrssfeed.localhost/controllers/home-controller.php" class="icon"><img id="" src="/public/assets/img/logo.png" alt="homepage"></a>
                     </li>
 
                     <li class="nav-item d-lg-none navMobile">
@@ -42,13 +42,13 @@
                     </div>
                     <ul class="navbar-nav mb-2 mb-lg-0 topBotomBordersOut ml-auto text-center fw-bold">
                         <li class="nav-item">
-                            <a class="nav-link " href="#"><?=$arrayXML[0]->nameCategory?></a>
+                            <a class="nav-link " href="http://myrssfeed.localhost/controllers/pages-controller.php?category=0"><?=$arrayXML[0]->nameCategory?></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><?=$arrayXML[1]->nameCategory?></a>
+                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=1"><?=$arrayXML[1]->nameCategory?></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><?=$arrayXML[2]->nameCategory?></a>
+                            <a class="nav-link" href="http://myrssfeed.localhost/controllers/pages-controller.php?category=2"><?=$arrayXML[2]->nameCategory?></a>
                         </li>
 
                         <li class="nav-item d-none d-lg-block">
