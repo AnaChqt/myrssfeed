@@ -2,7 +2,9 @@
 // $articlesNumber = 9;
 $articlesNumber = $_COOKIE['articlesNumber'] ?? 9 ;
 
-$categories = $_COOKIE['categories'] ?? ['cat1','cat2','cat3'];
+// $categories = $_COOKIE['categories'] ?? ['cat1','cat2','cat3'];
+// $categooories = json_decode($_COOKIE['cateeegories']) ?? ['cat1','cat2','cat3'];
+$categories = isset($_COOKIE['categories']) ? json_decode($_COOKIE['categories']) : ['cat1','cat2','cat3'] ;
 // json_decode($_COOKIE['categories']) ???
 
 

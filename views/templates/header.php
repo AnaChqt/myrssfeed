@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse justify-content-between w-50 navVersion" id="navbarNav">
                     <div class="logo">
                         <!--logo-->
-                        <a href="#" class="logo"><img src="/public/assets/img/logo.png" alt=""></a>
+                        <a href="http://myrssfeed.localhost/controllers/home-controller.php" class="logo"><img src="/public/assets/img/logo.png" alt="homepage"></a>
                     </div>
                     <ul class="navbar-nav mb-2 mb-lg-0 topBotomBordersOut ml-auto text-center fw-bold">
                         <li class="nav-item">
@@ -55,7 +55,7 @@
                             <a class="icon" data-bs-toggle="modal" data-bs-target="#openModalDV"><img class="logo2" src="/public/assets/img/UserWhite.png" alt=""></a>
                         </li>
                     </ul>
-                </div>
+                </div> 
             </div>
         </nav>
     </header>
@@ -79,23 +79,23 @@
                                     <label for="categories">Choisissez 3 catégories :</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="Actualités" value="Actualités">
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat1" value="cat1" <?=isChecked('cat1')?>>
                                     <label class="checkbox" for="inlineCheckbox">Actualités</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="Test" value="Test">
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat2" value="cat2" <?=isChecked('cat2')?>>
                                     <label class="checkbox" for="inlineCheckbox">Test</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="PS5" value="PS5">
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat3" value="cat3" <?=isChecked('cat3')?>>
                                     <label class="checkbox" for="inlineCheckbox">PS5</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="XBOX X" value="XBOX X">
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat4" value="cat4" <?=isChecked('cat4')?>>
                                     <label class="checkbox" for="inlineCheckbox">XBOX X</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="SWITCH" value="SWITCH">
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat5" value="cat5" <?=isChecked('cat5')?>>
                                     <label class="checkbox" for="inlineCheckbox">SWITCH</label>
                                 </div>
                                 <p class="error"><?= $error['categories'] ?? '' ?></p>
