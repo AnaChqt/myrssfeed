@@ -6,7 +6,7 @@ let i = 0,
 
 for (; i<l; i++)
 	checkboxes[i].addEventListener("change", function (){
-		if (document.querySelectorAll(":checked").length > 3)
+		if (document.querySelectorAll(".categories:checked").length > 3)
 			this.checked = false;
 	}, false);
 
