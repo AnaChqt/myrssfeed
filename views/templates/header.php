@@ -79,23 +79,23 @@
                                     <label for="categories">Choisissez 3 catégories :</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat1" value="cat1" <?=isChecked('cat1')?>>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat1" value="cat1">
                                     <label class="checkbox" for="inlineCheckbox">Actualités</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat2" value="cat2" <?=isChecked('cat2')?>>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat2" value="cat2">
                                     <label class="checkbox" for="inlineCheckbox">Test</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat3" value="cat3" <?=isChecked('cat3')?>>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat3" value="cat3">
                                     <label class="checkbox" for="inlineCheckbox">PS5</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat4" value="cat4" <?=isChecked('cat4')?>>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat4" value="cat4">
                                     <label class="checkbox" for="inlineCheckbox">XBOX X</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat5" value="cat5" <?=isChecked('cat5')?>>
+                                    <input name="categories[]" class="form-check-input categories" type="checkbox" id="cat5" value="cat5">
                                     <label class="checkbox" for="inlineCheckbox">SWITCH</label>
                                 </div>
                                 <p class="error"><?= $error['categories'] ?? '' ?></p>

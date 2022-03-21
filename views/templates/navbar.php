@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <?php
 // Tableau des erreurs
 $error = [];
@@ -202,3 +204,4 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){ //permet de ne pas afficher les message
 
 </body>
 </html>
+>>>>>>> origin/navbar
