@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg justify-content-center fixed-top">
+    <header >
+        <nav class="navbar navbar-expand-lg justify-content-center" id="navigation">
             <div class="container-fluid navbarMobile">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
