@@ -1,6 +1,6 @@
 <?php
     $items = $arrayXML[$category]->flux->channel->item;
-    for ($i=0; $i<=$format ; $i++) { 
+    for ($i=0; $i<$format ; $i++) { 
 ?>
 
     <!-- <div class="card">

@@ -18,7 +18,7 @@
     <title>ManuGameWorld</title>
 </head>
 
-<body>
+<body class="<?=$theme?>">
     <header>
 
         <nav class="navbar navbar-expand-lg justify-content-center fixed-top" id="navigation">
@@ -74,7 +74,7 @@
     <div class="modal fade" id="openModalDV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" id="formUser" enctype="multipart/form-data">
+                <form action="<?= htmlspecialchars($_SERVER['REQUEST_URI']) ?>" method="POST" id="formUser" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Paramètres</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -121,15 +121,15 @@
                                         <label for="format">Choisissez un format :</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input name="format[]" class="form-check-input format" type="radio" required id="6" value="6" <?=isChecked('6')?>>
+                                        <input name="format" class="form-check-input format" type="radio" required id="6" value="6" <?=isChecked('6')?>>
                                         <label class="radio" for="inlineradio">6</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input name="format[]" class="form-check-input format" type="radio" required id="9" value="9" <?=isChecked('9')?>>
+                                        <input name="format" class="form-check-input format" type="radio" required id="9" value="9" <?=isChecked('9')?>>
                                         <label class="radio" for="inlineradio">9</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input name="format[]" class="form-check-input format" type="radio" required id="12" value="12" <?=isChecked('12')?>>
+                                        <input name="format" class="form-check-input format" type="radio" required id="12" value="12" <?=isChecked('12')?>>
                                         <label class="radio" for="inlineRadio">12</label>
                                     </div>
                                     <p class="error"><?= $error['format'] ?? '' ?></p>

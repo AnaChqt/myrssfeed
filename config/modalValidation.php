@@ -19,14 +19,14 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){ //permet de ne pas afficher les message
         }
     }
 
-    // Nettoyage et validation : radio
+    // Nettoyage et validation : radio : booleen
     define('FORMAT',['6', '9', '12']);
-    $selectedFormat = filter_input(INPUT_POST, 'format', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY) ?? [];
+    $selectedFormat = filter_input(INPUT_POST, 'format', FILTER_SANITIZE_NUMBER_INT) ?? '';
 
-    if (count(array_intersect((FORMAT), $selectedFormat)) != count($selectedFormat)){
-        $error['format'] = 'cochez une case';
+    if (!in_array($selectedFormat, FORMAT)){
+        $error['format'] = 'choisissez le nombre d\'articles que vous voulez afficher';
     } else {
-        setcookie('format', json_encode($selectedFormat), time() + 60*60*24*3); // pour 3 jours
+        setcookie('format', $selectedFormat, time() + 60*60*24*3); // pour 3 jours
     }
 
 
@@ -51,7 +51,7 @@ function isChecked($input){
     if (isset($_POST['format'])) {
         $fo = $_POST['format'];
     } else if (isset($_COOKIE['format'])){
-        $fo = json_decode($_COOKIE['format']);
+        $fo = ($_COOKIE['format']);
     }
 
     if (isset($_POST['categories'])) {
@@ -61,7 +61,7 @@ function isChecked($input){
     }
 
 
-    if (in_array($input, $ca) === true || $input == $fo[0]) {
+    if (in_array($input, $ca) === true || $input == $fo) {
         return "checked";
     } 
     // in_array Retourne true si needle(1er parametre) est trouvé dans le tableau haystack(second parametre), false sinon.

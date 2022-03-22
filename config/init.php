@@ -9,7 +9,7 @@ $categories = isset($_COOKIE['categories']) ? json_decode($_COOKIE['categories']
 if (isset($_POST['format'])) {
     $format = $_POST['format'];
 } else if (isset($_COOKIE['format'])){
-    $format = json_decode($_COOKIE['format']);
+    $format = $_COOKIE['format'];
 } else {
     $format = ['9'];
 }
@@ -25,11 +25,10 @@ if (isset($_POST['categories'])) {
 if (isset($_POST['mod'])) {
     $theme = 'dark';
 } else if (isset($_COOKIE['mod'])){
-    $theme = json_decode($_COOKIE['mod']);
+    $theme = $_COOKIE['mod'];  //ce cookie devrait etre 'dark' ou 'light'
 } else {
     $theme = 'light';
 }
-
 
 
 
