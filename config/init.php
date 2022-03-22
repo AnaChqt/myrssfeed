@@ -1,11 +1,35 @@
 <?php
-// $articlesNumber = 9;
-$articlesNumber = $_COOKIE['articlesNumber'] ?? 9 ;
 
-// $categories = $_COOKIE['categories'] ?? ['cat1','cat2','cat3'];
-// $categooories = json_decode($_COOKIE['cateeegories']) ?? ['cat1','cat2','cat3'];
 $categories = isset($_COOKIE['categories']) ? json_decode($_COOKIE['categories']) : ['cat1','cat2','cat3'] ;
-// json_decode($_COOKIE['categories']) ???
+
+
+// $format et $categories ont une valeur par défaut
+// si il y a du post ils prennent le post, parce que quand on est en post on change les cookies mais que pour la page d'apres encore, 
+// sinon si y'a pas de post mais des cookies, ca veut dire qu'on est sur la page d'apres encore donc qu'ils sont à jour
+if (isset($_POST['format'])) {
+    $format = $_POST['format'];
+} else if (isset($_COOKIE['format'])){
+    $format = json_decode($_COOKIE['format']);
+} else {
+    $format = ['9'];
+}
+
+if (isset($_POST['categories'])) {
+    $categories = $_POST['categories'];
+} else if (isset($_COOKIE['categories'])){
+    $categories = json_decode($_COOKIE['categories']);
+} else {
+    $categories = ['cat1','cat2','cat3'];
+}
+
+if (isset($_POST['mod'])) {
+    $theme = 'dark';
+} else if (isset($_COOKIE['mod'])){
+    $theme = json_decode($_COOKIE['mod']);
+} else {
+    $theme = 'light';
+}
+
 
 
 

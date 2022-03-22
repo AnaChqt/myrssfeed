@@ -1,6 +1,6 @@
 <?php
     $items = $arrayXML[$category]->flux->channel->item;
-    for ($i=0; $i<=$articlesNumber ; $i++) { 
+    for ($i=0; $i<=$format ; $i++) { 
 ?>
 
     <!-- <div class="card">
@@ -15,7 +15,7 @@
         </div>
         <a class="discover" href="< ?=$items[$i]->link?>">En savoir plus</a>
     </div> -->
-<!-- < ?php } ?> -->
+<!-- < ?php  ?> -->
 
 
 
@@ -24,7 +24,7 @@
 
 
 
-<!-- < ?php for ($i=0; $i <$articlesNumber ; $i++) { ?> -->
+<!-- < ?php for ($i=0; $i <$format ; $i++)  ?> -->
 
     
         <div class="cardPage">

@@ -1,4 +1,4 @@
-// Limite le choix à 3
+// ------------    Limite le choix à 3 ------------
 let checkboxes = document.getElementsByClassName('categories');
 
 let i = 0,
@@ -10,17 +10,29 @@ for (; i<l; i++)
 			this.checked = false;
 	}, false);
 
-// pour le thème dark
-let toggle_btn = document.getElementById('mod');
+
+
+
+
+
+
+
+
+
+// ------------ pour le thème dark ------------
+let mod_btn = document.getElementById('mod');
 let body = document.getElementsByTagName('body')[0];
+// let dark_theme_class = 'dark';
 
-let dark_theme_class = 'dark';
-
-toggle_btn.addEventListener('click', function() {
-    if (body.classList.contains(dark_theme_class)) {
-        body.classList.remove(dark_theme_class);
+mod_btn.addEventListener('click', function() {
+    if (body.classList.contains('dark')) {
+        body.classList.remove('dark');
     }
     else {
-        body.classList.add(dark_theme_class);
+        body.classList.add('dark');
     }
 });
+
+if (mod_btn.checked) {
+    body.classList.add('dark');
+}
