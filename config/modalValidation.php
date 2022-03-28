@@ -52,12 +52,16 @@ function isChecked($input){
         $fo = $_POST['format'];
     } else if (isset($_COOKIE['format'])){
         $fo = ($_COOKIE['format']);
+    } else {
+        $fo = 'firstTimers';
     }
 
     if (isset($_POST['categories'])) {
         $ca = $_POST['categories'];
     } else if (isset($_COOKIE['categories'])){
         $ca = json_decode($_COOKIE['categories']);
+    } else {
+        $ca = ['firstTimers'];
     }
 
 
