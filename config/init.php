@@ -11,7 +11,7 @@ if (isset($_POST['format'])) {
 } else if (isset($_COOKIE['format'])){
     $format = $_COOKIE['format'];
 } else {
-    $format = ['9'];
+    $format = '9';
 }
 
 if (isset($_POST['categories'])) {
