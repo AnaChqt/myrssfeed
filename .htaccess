@@ -1,0 +1,5 @@
+# /accueil -> /controllers/home-controller.php
+RewriteRule ^accueil$ /controllers/home-controller.php [L]
+
+# /articles -> /controllers/home-controller.php
+RewriteRule ^articles$ /controllers/page-controller-home.php [L]

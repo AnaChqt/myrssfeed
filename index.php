@@ -14,5 +14,5 @@
 
 
 
-header('location: /controllers/home-controller.php');
+header('location: /accueil.php');
 die;
